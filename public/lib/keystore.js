@@ -391,7 +391,7 @@ KeyStore.prototype.getSeed = function (pwDerivedKey) {
 };
 
 KeyStore.prototype.exportPrivateKey = function (address, pwDerivedKey) {
-
+debugger
   if(!this.isDerivedKeyCorrect(pwDerivedKey)) {
     throw new Error("Incorrect derived key!");
   }
@@ -470,6 +470,7 @@ KeyStore.prototype.hasAddress = function (address, callback) {
 };
 
 KeyStore.prototype.signTransaction = function (txParams, callback) {
+  debugger
   var _this = this
 
   var ethjsTxParams = {};

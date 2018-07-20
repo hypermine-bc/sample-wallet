@@ -613,13 +613,13 @@ KeyStore.prototype.keyFromPassword = function (password, callback) {
 // Uses defaultHdPathString for the addresses.
 
 KeyStore.prototype.passwordProvider = function (callback) {
-
+  debugger
   var password = prompt("Enter password to continue", "Enter password");
   callback(null, password);
 };
 
 KeyStore.prototype.hasAddress = function (address, callback) {
-
+  debugger
   var addrToCheck = strip0x(address);
 
   if (this.encPrivKeys[addrToCheck] === undefined) {
@@ -630,6 +630,7 @@ KeyStore.prototype.hasAddress = function (address, callback) {
 };
 
 KeyStore.prototype.signTransaction = function (txParams, callback) {
+  debugger
   var _this = this;
 
   var ethjsTxParams = {};
